@@ -1,7 +1,7 @@
 package com.srwaggon.treasure.loot;
 
-import com.srwaggon.treasure.loot.valuable.ValuableSupplier;
-import com.srwaggon.treasure.loot.weapon.WeaponSupplier;
+import com.srwaggon.treasure.loot.supplier.equipment.EquipmentSupplier;
+import com.srwaggon.treasure.loot.supplier.valuable.ValuableSupplier;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -19,8 +19,8 @@ public class LootGenerator {
 
   public static Collection<LootItem> generate() {
     ArrayList<LootItem> lootItems = new ArrayList<>();
-    lootItems.addAll(new LootGenerator(new WeaponSupplier()).generateUpTo(0, 3));
-    lootItems.addAll(new LootGenerator(new ValuableSupplier()).generateUpTo(1, 3));
+    lootItems.addAll(new LootGenerator(new EquipmentSupplier()).generateUpTo(0, 3));
+    lootItems.addAll(new LootGenerator(new ValuableSupplier()).generateUpTo(0, 3));
     return lootItems;
   }
 

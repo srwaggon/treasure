@@ -58,15 +58,14 @@ public class LootItem {
   @Override
   public String toString() {
     Map<Boolean, List<Tag>> tagsByPriority = getTags().stream()
-        .sorted((t0, t1) -> t1.getPriority() - t0.getPriority())
         .collect(Collectors.partitioningBy(tag -> tag.getPriority() > 0));
 
     String quantity = this.quantity > 1 ? "" + getQuantity() + " " : "";
 
-    String prependTags = tagsByPriority.get(true).stream().map(Tag::asString).collect(Collectors.joining(" "));
+    String prependTags = tagsByPriority.get(true).stream().sorted((t0, t1) -> t1.getPriority() - t0.getPriority()).map(Tag::asString).collect(Collectors.joining(" "));
     String prepend = prependTags.length() > 0 ? prependTags + " " : "";
 
-    String appendTags = tagsByPriority.get(false).stream().map(Tag::asString).collect(Collectors.joining(" "));
+    String appendTags = tagsByPriority.get(false).stream().sorted(Comparator.comparingInt(Tag::getPriority)).map(Tag::asString).collect(Collectors.joining(" "));
     String append = appendTags.length() > 0 ? " " + appendTags : "";
 
     return String.format("%s%s%s%s", quantity, prepend, item, append);

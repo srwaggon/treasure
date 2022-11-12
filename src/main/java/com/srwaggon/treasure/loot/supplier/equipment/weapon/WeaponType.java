@@ -1,4 +1,4 @@
-package com.srwaggon.treasure.loot.weapon;
+package com.srwaggon.treasure.loot.supplier.equipment.weapon;
 
 public enum WeaponType {
   SWORD,
@@ -22,4 +22,5 @@ public enum WeaponType {
   public String asString() {
     return this.name().toLowerCase().replace("_", " ");
   }
+
 }

@@ -1,4 +1,4 @@
-package com.srwaggon.treasure.loot.valuable.currency;
+package com.srwaggon.treasure.loot.supplier.valuable.currency;
 
 import com.srwaggon.treasure.loot.LootItem;
 import com.srwaggon.treasure.loot.LootItemFactory;

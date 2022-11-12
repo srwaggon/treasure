@@ -20,15 +20,14 @@ public class MetaLootItem extends LootItem {
   }
 
   public MetaLootItem withReasonableRandomQuality() {
-    int rarity = (int) (Math.random() * 100);
-    QualityTag qualityTag = rarity < 20
-        ? QualityTag.POOR_TAG
-        : rarity < 60
-            ? QualityTag.COMMON_TAG
-            : rarity < 80
-                ? QualityTag.FINE_TAG
-                : rarity < 95
-                    ? QualityTag.QUALITY_TAG
+    double roll = Math.random();
+    if (roll < 0.5) {
+      return this;
+    }
+    QualityTag qualityTag = roll < 0.55 ? QualityTag.BROKEN_TAG
+        : roll < 0.65 ? QualityTag.POOR_TAG
+            : roll < 0.8 ? QualityTag.FINE_TAG
+                : roll < .95 ? QualityTag.QUALITY_TAG
                     : QualityTag.MASTERWORK_TAG;
     this.withTag(qualityTag);
     return this;

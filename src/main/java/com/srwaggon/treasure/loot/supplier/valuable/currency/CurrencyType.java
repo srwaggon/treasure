@@ -1,6 +1,4 @@
-package com.srwaggon.treasure.loot.valuable.currency;
-
-import com.srwaggon.treasure.loot.valuable.ValuableType;
+package com.srwaggon.treasure.loot.supplier.valuable.currency;
 
 public enum CurrencyType {
   COPPER_PIECES,

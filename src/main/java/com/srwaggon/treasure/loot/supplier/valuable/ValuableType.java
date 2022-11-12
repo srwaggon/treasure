@@ -1,28 +1,10 @@
-package com.srwaggon.treasure.loot.valuable;
+package com.srwaggon.treasure.loot.supplier.valuable;
 
 public enum ValuableType {
 
   ANCIENT_COIN,
   PAINTING,
   STATUE,
-
-  DIAMOND,
-  EMERALD,
-  JADE,
-  OPAL,
-  RUBY,
-  SAPPHIRE,
-  TOPAZ,
-
-  CROWN,
-  NECKLACE,
-  RING,
-
-  JUG,
-  PLATTER,
-  RUG,
-  TAPESTRY,
-  VASE,
   ;
 
   public static ValuableType chooseOneAtRandom() {

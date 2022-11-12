@@ -13,8 +13,16 @@ public class QualityTag extends Tag {
   public static final QualityTag FINE_TAG = new QualityTag(Quality.FINE);
   public static final QualityTag COMMON_TAG = new QualityTag(Quality.COMMON);
   public static final QualityTag POOR_TAG = new QualityTag(Quality.POOR);
+  public static final QualityTag BROKEN_TAG = new QualityTag(Quality.BROKEN);
 
-  private static final QualityTag[] qualityTags = new QualityTag[]{MASTERWORK_TAG, QUALITY_TAG, FINE_TAG, COMMON_TAG, POOR_TAG};
+  private static final QualityTag[] qualityTags = new QualityTag[]{
+      MASTERWORK_TAG,
+      QUALITY_TAG,
+      FINE_TAG,
+      COMMON_TAG,
+      POOR_TAG,
+      BROKEN_TAG
+  };
 
   private final Quality quality;
 

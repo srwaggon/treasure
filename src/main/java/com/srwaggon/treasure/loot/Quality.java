@@ -6,6 +6,7 @@ public enum Quality {
   FINE,
   COMMON,
   POOR,
+  BROKEN,
   ;
 
   public String asString() {

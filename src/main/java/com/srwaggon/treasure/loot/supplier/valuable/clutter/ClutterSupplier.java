@@ -1,15 +1,15 @@
-package com.srwaggon.treasure.loot.weapon;
+package com.srwaggon.treasure.loot.supplier.valuable.clutter;
 
 import com.srwaggon.treasure.loot.LootItem;
 import com.srwaggon.treasure.loot.LootItemFactory;
 
 import java.util.function.Supplier;
 
-public class WeaponSupplier implements Supplier<LootItem> {
+public class ClutterSupplier implements Supplier<LootItem> {
 
   @Override
   public LootItem get() {
-    return LootItemFactory.newLootItem(WeaponType.chooseOneAtRandom())
+    return LootItemFactory.newLootItem(ClutterType.chooseOneAtRandom())
         .withReasonableRandomQuality()
         .withChanceOfMagical(10);
   }
