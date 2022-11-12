@@ -1,22 +1,23 @@
 package com.srwaggon.treasure.loot;
 
-public enum Quality {
+public enum Material {
 
-  MASTERWORK,
-  QUALITY,
-  FINE,
-  COMMON,
-  POOR,
-  BROKEN,
+  CLOTH,
+  GLASS,
+  HIDE,
+  IRON,
+  LEATHER,
+  STEEL,
+  WOOD,
   ;
 
-  public static Quality chooseOneAtRandom() {
-    Quality[] values = values();
+  public static Material chooseOneAtRandom() {
+    Material[] values = values();
     return values[(int) (Math.random() * values.length)];
   }
-
 
   public String asString() {
     return this.name().toLowerCase().replace("_", " ");
   }
+
 }

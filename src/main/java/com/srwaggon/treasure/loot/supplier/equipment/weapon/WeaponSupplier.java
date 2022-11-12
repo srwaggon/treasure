@@ -10,6 +10,7 @@ public class WeaponSupplier implements Supplier<LootItem> {
   @Override
   public LootItem get() {
     return LootItemFactory.newLootItem(WeaponType.chooseOneAtRandom())
+        .withRandomWeaponMaterial()
         .withReasonableRandomQuality()
         .withChanceOfMagical(10);
   }

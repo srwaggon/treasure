@@ -19,7 +19,7 @@ public class LootGenerator {
 
   public static Collection<LootItem> generate() {
     ArrayList<LootItem> lootItems = new ArrayList<>();
-    lootItems.addAll(new LootGenerator(new EquipmentSupplier()).generateUpTo(0, 3));
+    lootItems.addAll(new LootGenerator(new EquipmentSupplier()).generateUpTo(0, 100));
     lootItems.addAll(new LootGenerator(new ValuableSupplier()).generateUpTo(0, 3));
     return lootItems;
   }
